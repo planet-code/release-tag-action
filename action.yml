@@ -1,5 +1,6 @@
-name: "Release tag"
+name: "Release and tag"
 description: "Create a tag based on last release branch merge"
+author: "Planet Code"
 inputs:
   token: # Github token
     description: "The github token"

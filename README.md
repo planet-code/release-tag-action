@@ -1,4 +1,4 @@
-# Release Tag After Merge Action
+# Release And Tag After Merge Action
 
 This Github Action tags and releases after a pull request is merged.
 
@@ -7,6 +7,10 @@ This Github Action tags and releases after a pull request is merged.
                     /
 "release/1.0.0"----/
 ```
+
+## IMPORTANT!
+
+Needs the merge message to stay default (Example: _"Merge pull request #1 from some-repo"_)
 
 ## Inputs
 
@@ -42,5 +46,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/release-tag-action@1.0.0
+      - uses: planet-code/release-tag-action@1.0.0
 ```
