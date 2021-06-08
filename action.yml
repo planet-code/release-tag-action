@@ -1,0 +1,20 @@
+name: "Release tag"
+description: "Create a tag based on last release branch merge"
+inputs:
+  token: # Github token
+    description: "The github token"
+    required: true
+  release-branch-prefix: # Release branch prefix
+    description: "The prefix of the release branch"
+    required: false
+    default: "release/"
+  show-changelog: # Show PR body as release body
+    description: "To show the title and body of the pull request as the changelog (body) of the release"
+    required: false
+    default: true
+outputs:
+  tag: # tag name
+    description: "The tag name"
+runs:
+  using: "node12"
+  main: "dist/index.js"

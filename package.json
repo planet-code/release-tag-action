@@ -1,0 +1,26 @@
+{
+  "name": "release-tag-action",
+  "version": "1.0.0",
+  "description": "A Github Action to automatically release and tag a branch after a merge of a pull request",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build index.js --license licenses.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planet-code/release-tag-action.git"
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "release",
+    "tag",
+    "automation"
+  ],
+  "author": "Ellen Langleaar",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.3.0",
+    "@actions/github": "^5.0.0"
+  }
+}
