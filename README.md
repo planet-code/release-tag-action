@@ -16,7 +16,7 @@ Needs the merge message to stay default (Example: _"Merge pull request #1 from s
 
 ### `token`
 
-**REQUIRED** A Github token, usually ${{ github.token }}.
+**REQUIRED** A Github token, usually ${{ secrets.GITHUB_TOKEN }}.
 
 ### `release-branch-prefix`
 
