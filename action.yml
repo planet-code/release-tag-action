@@ -8,7 +8,7 @@ inputs:
   release-branch-pattern: # Release branch name regex pattern
     description: "The regex pattern of the release branch prefix"
     required: false
-    default: "release\/"
+    default: "release/"
   show-changelog: # Show PR body as release body
     description: "To show the title and body of the pull request as the changelog (body) of the release"
     required: false
