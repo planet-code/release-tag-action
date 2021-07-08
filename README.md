@@ -47,7 +47,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: planet-code/release-tag-action@1.0.0
+      - uses: planet-code/release-tag-action@1.1.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          release-branch-format: "release\/"
+          show-changelog: true
 ```
