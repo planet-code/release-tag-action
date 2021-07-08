@@ -5,10 +5,10 @@ inputs:
   token: # Github token
     description: "The github token"
     required: true
-  release-branch-prefix: # Release branch prefix
-    description: "The prefix of the release branch"
+  release-branch-pattern: # Release branch name regex pattern
+    description: "The regex pattern of the release branch prefix"
     required: false
-    default: "release/"
+    default: "release\/"
   show-changelog: # Show PR body as release body
     description: "To show the title and body of the pull request as the changelog (body) of the release"
     required: false

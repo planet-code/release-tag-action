@@ -23,17 +23,19 @@ async function action() {
 }
 
 function getTag() {
-  const releaseBranchPrefix = core.getInput("release-branch-prefix");
+  const releaseBranchPattern = core.getInput("release-branch-pattern");
   const releaseBranchName = getReleaseBranchName();
+
   if (
-    releaseBranchPrefix.length > 0 &&
-    !releaseBranchName.includes(releaseBranchPrefix)
+    releaseBranchPattern.length > 0 &&
+    !releaseBranchName.match(releaseBranchPattern)
   )
     throw new Error(
-      `Branch name doesn't include prefix. releaseBranchName={${releaseBranchName}};releaseBranchPrefix={${releaseBranchPrefix}}`
+      `Branch name doesn't contain the correct pattern. releaseBranchName={${releaseBranchName}};releaseBranchPattern={${releaseBranchPattern}}`
     );
 
-  return releaseBranchName.replace(releaseBranchPrefix, "");
+  var branchElements = releaseBranchName.split(pattern);
+  return branchElements[branchElements.length - 1];
 }
 
 function getReleaseBranchName() {

@@ -18,9 +18,10 @@ Needs the merge message to stay default (Example: _"Merge pull request #1 from s
 
 **REQUIRED** A Github token, usually ${{ secrets.GITHUB_TOKEN }}.
 
-### `release-branch-prefix`
+### `release-branch-format`
 
-The prefix of the release branch. Default `release/`. (example branch name: release/1.0.0)
+The regex format of the release branch, after this string should be the tag name used.
+Default `release\/`. (example branch names: release/1.0.0 or feature/1234@release/1.0.0)
 
 ### `show-changelog`
 
