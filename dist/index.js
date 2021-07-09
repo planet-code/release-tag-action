@@ -6185,7 +6185,7 @@ function getTag() {
       `Branch name doesn't contain the correct pattern. releaseBranchName={${releaseBranchName}};releaseBranchPattern={${releaseBranchPattern}}`
     );
 
-  var branchElements = releaseBranchName.split(pattern);
+  var branchElements = releaseBranchName.split(releaseBranchPattern);
   return branchElements[branchElements.length - 1];
 }
 
